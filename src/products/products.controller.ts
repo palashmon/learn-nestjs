@@ -14,4 +14,9 @@ export class ProductsController {
     const id = this.productsService.insertProduct(prodTitle, prodDesc, prodPrice);
     return { id };
   }
+
+  @Get()
+  getAllProducts() {
+    return this.productsService.getProducts();
+  }
 }
